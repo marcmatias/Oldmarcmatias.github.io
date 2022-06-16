@@ -6,14 +6,19 @@
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+	  	<Pager linkClass="pager__link" class="pager" :info="$page.posts.pageInfo" />
     </div>
 
   </Layout>
 </template>
 
 <page-query>
-query {
-  posts: allPost(filter: { published: { eq: true }}) {
+query ($page: Int) {
+  posts: allPost(perPage: 5,  page: $page, filter: { published: { eq: true }}) @paginate  {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
@@ -35,16 +40,44 @@ query {
 </page-query>
 
 <script>
+import { Pager } from 'gridsome'
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostCard,
+    Pager
   },
   metaInfo: {
     title: 'Hello, world!'
   }
 }
 </script>
+
+<style lang="scss">
+.pager {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  &__link {
+    color: var(--link-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+
+    &:hover:not(.active) {
+      background-color: var(--bg-content-color);
+      border-radius: 5px;
+      color: var(--link-color);
+    }
+  }
+}
+
+.active {
+  background-color: var(--bg-content-color);
+  border-radius: 5px;
+}
+</style>
