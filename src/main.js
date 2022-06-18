@@ -24,7 +24,7 @@ export default function(Vue, { router, head, isClient }) {
     {
       key: "og:site_name",
       name: "og:site_name",
-      content: username,
+      content: "Blog " + username,
     },
     {
       key: "og:title",
@@ -44,7 +44,7 @@ export default function(Vue, { router, head, isClient }) {
     {
       key: "twitter:title",
       name: "twitter:title",
-      content: username,
+      content: "Blog " + username,
     },
     {
       key: "twitter:creator",

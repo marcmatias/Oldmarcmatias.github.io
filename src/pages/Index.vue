@@ -51,7 +51,7 @@ export default {
     Pager
   },
   metaInfo: {
-    title: 'Marcmatias blog'
+    title: 'Início'
   }
 }
 </script>

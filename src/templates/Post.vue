@@ -40,22 +40,60 @@ export default {
     PostMeta,
     PostTags
   },
-  metaInfo () {
+  metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
         {
-          name: 'description',
-          content: this.$page.post.description
-        }
-      ]
-    }
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.$page.metadata.siteName,
+        },
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.post.description,
+        },
+        {
+          key: "twitter:image",
+          name: "twitter:image",
+          content:
+            this.$page.metadata.siteUrl + this.$page.post.cover_image.src,
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.$page.post.description,
+        },
+        {
+          key: "og:title",
+          name: "og:title",
+          content: this.$page.metadata.siteName,
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.$page.post.description,
+        },
+        {
+          key: "og:image",
+          name: "og:image",
+          content:
+            this.$page.metadata.siteUrl + this.$page.post.cover_image.src,
+        },
+      ],
+    };
   }
 }
 </script>
 
 <page-query>
 query Post ($id: ID!) {
+  metadata {
+  	siteName
+  	siteUrl
+  	siteDescription
+  }
   post: post (id: $id) {
     title
     path
