@@ -63,7 +63,7 @@ export default {
 
 .main {
   margin: 0 auto;
-  padding: 1.5vw 15px 0;
+  padding: 0.5vw 15px 0;
 }
 
 .footer {
