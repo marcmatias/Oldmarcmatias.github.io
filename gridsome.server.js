@@ -6,7 +6,11 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(async store => {
+    store.addMetadata('userName', '@marcmatias')
+    store.addMetadata('socCodePen', '//codepen.io/marcmatias')
+    store.addMetadata('socGithub', '//github.com/marcmatias')
+    store.addMetadata('socIn', '//www.linkedin.com/in/marcel-marques-836a04208')
+    store.addMetadata('socTwitter', '//twitter.com/marcmatias')
   })
 }

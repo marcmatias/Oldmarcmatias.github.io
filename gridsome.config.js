@@ -5,8 +5,12 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome Blog Starter',
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
+  siteName: 'Blog Marcmatias',
+  siteDescription: 'Marcel Marques desenvolvedor de software, bacharel em Sistemas para Internet',
+  
+  authorName: 'Marcel Marques',
+
+  siteUrl: 'https://marcmatias.github.io',
 
   templates: {
     Post: '/:title',
@@ -38,7 +42,8 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        '@gridsome/remark-prismjs'
+        '@gridsome/remark-prismjs',
+        ['gridsome-plugin-remark-youtube', { width: '100%', align: 'auto' }]
       ]
     }
   }

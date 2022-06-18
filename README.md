@@ -1,29 +1,21 @@
-# Gridsome Blog Starter
+# Marcmatias webpage e blog
 
-> A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
+Minha página pessoal disponível em https://marcmatias.github.io
 
-## Features
-- Beautiful and simple design.
-- Markdown for content.
-- Tags support.
-- Dark / Light toggle.
-- CSS variables, SCSS & BEM for styling.
-- 100, 100, 100, 100 score on Google Lighthouse.
-- Uses same front-matter fields as Dev.to.
+## Como é feito:
 
-## Demo URL
+**Tech used:** Gridsome, JavaScript, Vue.js, HTML e SCSS
 
-https://gridsome-starter-blog.netlify.com
+Site desenvolvido utilizado como base a própria documentação do Gridsome e toma como base o starter gridsome-blog-starter
 
-## Install
+## O que vi e aprendi:
 
-### 1. Install Gridsome CLI tool if you don't have
+É interessante a rapidez no desenvolvimento de páginas com o Gridsome. Modificações no código tem uma resposta muito rápida na atualização do que é exibido para o desenvolvedor tornando todo o processo de desenvolvimento mais fácil. A interface e as páginas como um todo ficam muito leves e rápidas e a documentação desse jamstack framework é muito bem escrita e intuitiva.
 
-`npm install --global @gridsome/cli`
+## Links relevantes:
 
-### 2. Install this starter
+**Starter utilizado como base para o tema:** https://gridsome.org/starters/gridsome-blog-starter/
 
-1. `gridsome create my-gridsome-site https://github.com/gridsome/gridsome-starter-blog.git`
-2. `cd my-gridsome-site` to open folder
-3. `gridsome develop` to start local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+**Gridsome:** https://gridsome.org/
+
+**Vuejs:** https://vuejs.org/

@@ -16,8 +16,7 @@
     </main>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
+      <span class="footer__copyright">Copyleft <span class="copyleft">©</span> Marcmatias {{ new Date().getFullYear() }} </span>
     </footer>
 
   </div>
@@ -74,12 +73,13 @@ export default {
   text-align: center;
   font-size: .8em;
 
-  > span {
-    margin: 0 .35em;
+  .copyleft {
+    display:inline-block;
+    transform: scale(-1, 1);
   }
 
-  a {
-    color: currentColor;
+  > span {
+    margin: 0 .35em;
   }
 }
 </style>

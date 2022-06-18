@@ -6,7 +6,7 @@
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-	  	<Pager linkClass="pager__link" class="pager" :info="$page.posts.pageInfo" />
+	    <Pager linkClass="pager__link" class="pager" :info="$page.posts.pageInfo" />
     </div>
 
   </Layout>
@@ -23,7 +23,7 @@ query ($page: Int) {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "DD/MM/YYYY")
         timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
@@ -51,7 +51,7 @@ export default {
     Pager
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Marcmatias blog'
   }
 }
 </script>
