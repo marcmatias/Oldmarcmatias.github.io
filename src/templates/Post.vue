@@ -22,7 +22,7 @@
     </div>
 
     <div class="post-comments">
-      <!-- Add comment widgets here -->
+      <Disqus lang="pt_BR" :identifier="$page.post.title" />
     </div>
 
     <Author class="post-author" />
@@ -158,7 +158,11 @@ query Post ($id: ID!) {
 }
 
 .post-comments {
-  padding: calc(var(--space) / 2);
+  background-color: var(--bg-content-color);
+	max-width: var(--content-width);
+	margin: 0 auto;
+	transition: background-color .6s;
+	padding: var(--space);
 
   &:empty {
     display: none;

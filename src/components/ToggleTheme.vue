@@ -22,6 +22,8 @@ export default {
   methods: {
     toggleTheme() {
       this.darkTheme = !this.darkTheme
+      // Delay to reset embed disqus and change text color
+      setTimeout(this.$disqus.reset, 500);
 
       // This is using a script that is added in index.html
       window.__setPreferredTheme(
