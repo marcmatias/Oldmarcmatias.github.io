@@ -1,12 +1,12 @@
 <template>
   <Layout :show-logo="true" :show-search="false">
-    <h1 class="text-center">Search</h1>
+    <h1 class="text-center">Pesquisar</h1>
     <div class="text-center">
       <input
         type="text"
         name="search"
         id="search"
-        placeholder="Search by words in title"
+        placeholder="Buscar por palavras no título"
         class="search-input"
         v-model="search"
       />
@@ -22,7 +22,7 @@
         />
       </div>
       <div id="message" class="message text-center" v-else-if="search">
-        <span>No results found</span>
+        <span>Nenhum resultado para essa pesquisa</span>
       </div>
     </div>
   </Layout>
